@@ -12,7 +12,7 @@ public class Pizza {
         this.isVeg = isVeg;
         // your code goes here
         price = isVeg ? 300 : 400;
-        fla=false;
+        flag=false;
         flag1=false;
     }
 
