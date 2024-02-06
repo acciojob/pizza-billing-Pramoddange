@@ -6,6 +6,7 @@ public class Pizza {
     private Boolean isVeg;
     private String bill;
     private Boolean flag;
+    private Boolean flag2;
 
     private Boolean flag1;
     public Pizza(Boolean isVeg){
@@ -14,6 +15,7 @@ public class Pizza {
         price = isVeg ? 300 : 400;
         flag=false;
         flag1=false;
+        flag2=false;
     }
 
     public int getPrice() {
@@ -43,6 +45,7 @@ public class Pizza {
 
     public void addTakeaway(){
         // your code goes here
+        flag2=true;
         price+=20;
     }
 
@@ -54,7 +57,7 @@ public class Pizza {
         if (flag1) {
             bill += "Extra Toppings Added: " + (isVeg ? 70 : 120) + "\n";
         }
-        if (price > 400) {
+        if (flag2) {
             bill += "Paperbag Added: 20\n";
         }
         bill = "Base Price Of The Pizza: " + (isVeg ? 300 : 400) + "\n" + bill;
